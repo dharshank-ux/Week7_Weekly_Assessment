@@ -1,0 +1,200 @@
+[
+    {
+        "id": 1,
+        "type": "simple",
+        "question": "How many casual leaves are available per year?",
+        "answer": "Casual Leave: 12 days per year.\nEarned Leave: 15 days per year.\nSick Leave: 10 days per year.\nEmployees should request casual leave at least 2 days in advance.",
+        "expected_answer": "12 days per year",
+        "retrieved_sources": [
+            "leave_policy.txt"
+        ],
+        "source_match": true,
+        "refused": false
+    },
+    {
+        "id": 2,
+        "type": "simple",
+        "question": "How many sick leaves are available per year?",
+        "answer": "Sick Leave: 10 days per year.\nCasual Leave: 12 days per year.\nEarned Leave: 15 days per year.\nWorking days: Monday to Friday.",
+        "expected_answer": "10 days per year",
+        "retrieved_sources": [
+            "leave_policy.txt",
+            "attendance_policy.txt"
+        ],
+        "source_match": true,
+        "refused": false
+    },
+    {
+        "id": 3,
+        "type": "simple",
+        "question": "How many earned leaves are available per year?",
+        "answer": "Earned Leave: 15 days per year.\nCasual Leave: 12 days per year.\nSick Leave: 10 days per year.\nSalary is paid on the last working day of every month.",
+        "expected_answer": "15 days per year",
+        "retrieved_sources": [
+            "leave_policy.txt",
+            "salary_policy.txt"
+        ],
+        "source_match": true,
+        "refused": false
+    },
+    {
+        "id": 4,
+        "type": "simple",
+        "question": "How early should casual leave be requested?",
+        "answer": "Employees should request casual leave at least 2 days in advance.\nCasual Leave: 12 days per year.\nEarned Leave: 15 days per year.\nSick Leave: 10 days per year.",
+        "expected_answer": "At least 2 days in advance",
+        "retrieved_sources": [
+            "leave_policy.txt"
+        ],
+        "source_match": true,
+        "refused": false
+    },
+    {
+        "id": 5,
+        "type": "simple",
+        "question": "What are the normal working hours?",
+        "answer": "Working hours: 9 AM to 6 PM.",
+        "expected_answer": "9 AM to 6 PM",
+        "retrieved_sources": [
+            "leave_policy.txt",
+            "work_from_home.txt",
+            "attendance_policy.txt"
+        ],
+        "source_match": true,
+        "refused": false
+    },
+    {
+        "id": 6,
+        "type": "simple",
+        "question": "How many days per week do employees work?",
+        "answer": "Working days: Monday to Friday.",
+        "expected_answer": "5 days per week, Monday to Friday",
+        "retrieved_sources": [
+            "leave_policy.txt",
+            "salary_policy.txt",
+            "attendance_policy.txt"
+        ],
+        "source_match": true,
+        "refused": false
+    },
+    {
+        "id": 7,
+        "type": "simple",
+        "question": "Who must approve work from home?",
+        "answer": "Employees can work from home with manager approval.\nEmployees must be available during working hours.\nEmployees must submit original bills.\nBusiness travel requires manager approval.",
+        "expected_answer": "The manager must approve work from home",
+        "retrieved_sources": [
+            "travel_policy.txt",
+            "expense_policy.txt",
+            "work_from_home.txt"
+        ],
+        "source_match": true,
+        "refused": false
+    },
+    {
+        "id": 8,
+        "type": "simple",
+        "question": "When is the monthly salary paid?",
+        "answer": "Salary is paid on the last working day of every month.",
+        "expected_answer": "On the last working day of the month",
+        "retrieved_sources": [
+            "leave_policy.txt",
+            "salary_policy.txt"
+        ],
+        "source_match": true,
+        "refused": false
+    },
+    {
+        "id": 9,
+        "type": "multi_chunk",
+        "question": "How many casual and sick leaves are available in total per year?",
+        "answer": "Casual Leave: 12 days per year.\nSick Leave: 10 days per year.\nTotal: 22 days per year.",
+        "expected_answer": "12 casual leaves and 10 sick leaves, 22 days in total",
+        "retrieved_sources": [
+            "leave_policy.txt",
+            "salary_policy.txt"
+        ],
+        "source_match": true,
+        "refused": false
+    },
+    {
+        "id": 10,
+        "type": "multi_chunk",
+        "question": "What are the working days and normal working hours?",
+        "answer": "Working days: Monday to Friday.\nWorking hours: 9 AM to 6 PM.",
+        "expected_answer": "Monday to Friday, 9 AM to 6 PM",
+        "retrieved_sources": [
+            "leave_policy.txt",
+            "work_from_home.txt",
+            "attendance_policy.txt"
+        ],
+        "source_match": true,
+        "refused": false
+    },
+    {
+        "id": 11,
+        "type": "multi_chunk",
+        "question": "What approvals are required for work from home and business travel?",
+        "answer": "Business travel requires manager approval.\nEmployees can work from home with manager approval.\nEmployees must submit travel expenses with bills.\nTravel bookings should follow company guidelines.",
+        "expected_answer": "Manager approval is required for both work from home and business travel",
+        "retrieved_sources": [
+            "travel_policy.txt",
+            "work_from_home.txt"
+        ],
+        "source_match": true,
+        "refused": false
+    },
+    {
+        "id": 12,
+        "type": "multi_chunk",
+        "question": "What is required for expense reimbursement and who approves it?",
+        "answer": "Manager approval is required for reimbursement.\nBusiness-related expenses can be reimbursed.\nEmployees must submit travel expenses with bills.\nEmployees must submit original bills.",
+        "expected_answer": "Original bills are required and manager approval is needed",
+        "retrieved_sources": [
+            "travel_policy.txt",
+            "expense_policy.txt"
+        ],
+        "source_match": true,
+        "refused": false
+    },
+    {
+        "id": 13,
+        "type": "unanswerable",
+        "question": "What is the monthly salary of a software developer at ABC Technologies?",
+        "answer": "I don't have information on that",
+        "expected_answer": "I don't have information on that",
+        "retrieved_sources": [
+            "leave_policy.txt",
+            "salary_policy.txt"
+        ],
+        "source_match": true,
+        "refused": true
+    },
+    {
+        "id": 14,
+        "type": "unanswerable",
+        "question": "Who is the current CEO of ABC Technologies?",
+        "answer": "I don't have information on that",
+        "expected_answer": "I don't have information on that",
+        "retrieved_sources": [
+            "salary_policy.txt",
+            "security_policy.txt",
+            "conduct_policy.txt"
+        ],
+        "source_match": true,
+        "refused": true
+    },
+    {
+        "id": 15,
+        "type": "unanswerable",
+        "question": "What is the company's office street address?",
+        "answer": "I don't have information on that",
+        "expected_answer": "I don't have information on that",
+        "retrieved_sources": [
+            "salary_policy.txt",
+            "security_policy.txt"
+        ],
+        "source_match": true,
+        "refused": true
+    }
+]

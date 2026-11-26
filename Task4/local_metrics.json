@@ -1,0 +1,8 @@
+{
+    "evaluation_type": "Local heuristic evaluation - not official RAGAS",
+    "total_questions": 15,
+    "faithfulness_proxy": 0.867,
+    "answer_relevancy_proxy": 0.867,
+    "context_precision_proxy": 1.0,
+    "context_recall_proxy": 1.0
+}

@@ -1,0 +1,15 @@
+{"id":1,"type":"simple","question":"How many casual leaves are available per year?","expected_answer":"12 days per year","expected_sources":["leave_policy.txt"],"expected_pages":[1]}
+{"id":2,"type":"simple","question":"How many sick leaves are available per year?","expected_answer":"10 days per year","expected_sources":["leave_policy.txt"],"expected_pages":[1]}
+{"id":3,"type":"simple","question":"How many earned leaves are available per year?","expected_answer":"15 days per year","expected_sources":["leave_policy.txt"],"expected_pages":[1]}
+{"id":4,"type":"simple","question":"How early should casual leave be requested?","expected_answer":"At least 2 days in advance","expected_sources":["leave_policy.txt"],"expected_pages":[1]}
+{"id":5,"type":"simple","question":"What are the normal working hours?","expected_answer":"9 AM to 6 PM","expected_sources":["attendance_policy.txt"],"expected_pages":[1]}
+{"id":6,"type":"simple","question":"How many days per week do employees work?","expected_answer":"5 days per week, Monday to Friday","expected_sources":["attendance_policy.txt"],"expected_pages":[1]}
+{"id":7,"type":"simple","question":"Who must approve work from home?","expected_answer":"The manager must approve work from home","expected_sources":["work_from_home.txt"],"expected_pages":[1]}
+{"id":8,"type":"simple","question":"When is the monthly salary paid?","expected_answer":"On the last working day of the month","expected_sources":["salary_policy.txt"],"expected_pages":[1]}
+{"id":9,"type":"multi_chunk","question":"How many casual and sick leaves are available in total per year?","expected_answer":"12 casual leaves and 10 sick leaves, 22 days in total","expected_sources":["leave_policy.txt"],"expected_pages":[1]}
+{"id":10,"type":"multi_chunk","question":"What are the working days and normal working hours?","expected_answer":"Monday to Friday, 9 AM to 6 PM","expected_sources":["attendance_policy.txt"],"expected_pages":[1]}
+{"id":11,"type":"multi_chunk","question":"What approvals are required for work from home and business travel?","expected_answer":"Manager approval is required for both work from home and business travel","expected_sources":["work_from_home.txt","travel_policy.txt"],"expected_pages":[1]}
+{"id":12,"type":"multi_chunk","question":"What is required for expense reimbursement and who approves it?","expected_answer":"Original bills are required and manager approval is needed","expected_sources":["expense_policy.txt"],"expected_pages":[1]}
+{"id":13,"type":"unanswerable","question":"What is the monthly salary of a software developer at ABC Technologies?","expected_answer":"I don't have information on that","expected_sources":[],"expected_pages":[]}
+{"id":14,"type":"unanswerable","question":"Who is the current CEO of ABC Technologies?","expected_answer":"I don't have information on that","expected_sources":[],"expected_pages":[]}
+{"id":15,"type":"unanswerable","question":"What is the company's office street address?","expected_answer":"I don't have information on that","expected_sources":[],"expected_pages":[]}
